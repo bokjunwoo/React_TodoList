@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import ListContainer from './component/ListContainer';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import styled from "styled-components";
+
+const Section = styled.section`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid black;
+  border-radius: 5px;
+  max-width: 380px;
+`
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Section className='container'>
+        <ListContainer />
+      </Section>
     </div>
   );
 }
